@@ -1,6 +1,6 @@
 # 🧠 Deep Learning Assignment 6: Training Neural Networks with Keras (Advanced)
 
-This repository contains the implementation of Assignment 6 for CMPE-258: Deep Learning — focused on advanced training strategies using Keras, TensorFlow, and complementary libraries. The assignment was completed in two parts, across two Google Colab notebooks.
+This repository contains the implementation of Assignment 6 for **CMPE-258: Deep Learning** at San Jose State University. The assignment explores advanced training strategies in Keras/TensorFlow, including data augmentation, regularization, hyperparameter tuning, and custom training loop components.
 
 ---
 
@@ -12,49 +12,72 @@ This repository contains the implementation of Assignment 6 for CMPE-258: Deep L
 
 ---
 
-## 📦 Part 1: Data Augmentation and Generalization
+## 📦 Part 1: Data Augmentation & Generalization
 
-This notebook demonstrates regularization and generalization strategies using Keras/TensorFlow and complementary tools.
+This notebook demonstrates various techniques to improve generalization and model robustness through regularization and data augmentation.
 
-### ✅ Techniques Covered:
-- L1 and L2 Regularization
-- Dropout, Monte Carlo Dropout
-- EarlyStopping and TensorBoard Logging
-- Initializer Comparison (Glorot, He, Random)
-- Batch Normalization
-- Custom Dropout and Regularizer
-- Hyperparameter Tuning using Keras Tuner
-- Image Augmentation using KerasCV
-- **Multi-Modality Augmentation**:
-  - 📷 Image: `keras_cv`, `imgaug`, `albumentations`
-  - 📝 Text: `nlpaug` (WordNet, BERT-based)
-  - 📼 Video: `moviepy`
-  - 📊 Tabular: SMOTE, Noise Injection
-  - 📈 Time Series: Jitter + Scale
-  - 🎤 Audio: `librosa` pitch/time stretch
-  - 📄 Document Images: Blur, Perspective via `albumentations`
-- `fastai` Test-Time Augmentation (TTA)
+### ✅ Topics Covered:
+- **Regularization**:
+  - L1, L2 Regularization
+  - Dropout and Monte Carlo Dropout
+  - Batch Normalization
+  - EarlyStopping
+- **Hyperparameter Tuning**:
+  - `Keras Tuner` with Hyperband
+- **TensorBoard**:
+  - Integrated for training visualization
+- **Initializations**:
+  - Glorot, He, Random
+- **Custom Regularization**:
+  - LoggingDropout and custom L1
+
+### 🧪 Multi-Modality Augmentation (Section k):
+- 📷 **Image**: `keras_cv`, `imgaug`, `albumentations`
+- 📝 **Text**: `nlpaug` with WordNet and BERT-based augmentation
+- 📼 **Video**: `moviepy` used to apply effects on video
+- 📊 **Tabular**: SMOTE balancing and Gaussian noise injection
+- 📈 **Time Series**: Jittering and scaling applied to synthetic sine wave
+- 🎤 **Speech**: Pitch shift and time stretch using `librosa`
+- 📄 **Document Images**: Blurring, rotation, noise with `albumentations`
+
+### 🔁 fastai Augmentations (Section l):
+- `aug_transforms()` on MNIST sample
+- `learn.tta()` for test-time augmentation
+- Accuracy evaluation on augmented predictions
 
 ---
 
 ## ⚙️ Part 2: Advanced Keras Constructs
 
-This notebook explores low-level Keras functionality including custom training loops, layers, optimizers, and more.
+This notebook demonstrates advanced model training customization using low-level APIs and custom class implementations.
 
-### ✅ Features Demonstrated:
-- Custom Learning Rate Scheduler (Cosine Decay)
-- `MCAlphaDropout` Layer
-- Custom Normalization: `MaxNormDense`
-- Custom Regularizer, Constraint, Initializer, Activation
-- TensorBoard Logging
-- Custom Loss: Huber Loss
-- Custom Metric: HuberMetric
-- Custom Layers: `AddGaussianNoise`, `MyDense`
-- Residual Model: `ResidualBlock` + `ResidualRegressor`
-- Manual Momentum Optimizer
-- Full Custom Training Loop using `GradientTape`
+### ✅ Key Features:
+- **Custom Learning Rate Scheduler** (Cosine Decay Callback)
+- **Custom Dropout**: `MCAlphaDropout`
+- **Custom Normalization**: `MaxNormDense`
+- **Custom Loss**: `HuberLoss`
+- **Custom Metric**: `HuberMetric`
+- **Custom Layers**:
+  - `MyDense` with max norm
+  - `AddGaussianNoise`
+- **Custom Model**:
+  - `ResidualBlock` and `ResidualRegressor`
+- **Custom Initializer, Activation, Regularizer, Constraint**:
+  - `my_glorot_initializer`, `leaky_relu`, `MyL1Regularizer`, `MyPositiveWeights`
+- **Manual Optimizer Logic**:
+  - Momentum updates without subclassing
+- **Custom Training Loop**:
+  - Using `GradientTape` on Fashion MNIST with manual updates
 
 ---
 
-## 📁 Folder Structure Suggestion
+## 📝 How to Run
+
+1. Open each Colab notebook via the links above
+2. Follow the cells top-to-bottom
+3. Upload media files (e.g., audio, video, documents) when prompted
+4. View visualizations and results in each section
+5. Add your walkthrough video to YouTube and update the link
+
+---
 
