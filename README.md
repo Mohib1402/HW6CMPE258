@@ -8,7 +8,7 @@ This repository contains the implementation of Assignment 6 for **CMPE-258: Deep
 
 - 📘 [Part 1: Data Augmentation & Generalization](https://colab.research.google.com/drive/179yLwYnrpCyi6SdJ_rTiSuwfHYntQvnC?usp=sharing)
 - 📙 [Part 2: Advanced Keras Constructs](https://colab.research.google.com/drive/1K2VJGdH19fwk3c4R_U40hndzGV76dZ9q?usp=sharing)
-- 🎥 Video Walkthrough: [YouTube Link Placeholder](https://www.youtube.com/watch?v=XXXXXXXXXXX)
+- 🎥 Video Walkthrough: [Demo](https://drive.google.com/file/d/1vZ7TY6_bU-eAk1z01y4BL25XuWoZ5s1p/view?usp=sharing)
 
 ---
 
